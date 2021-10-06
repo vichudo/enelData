@@ -53,3 +53,4 @@ if proveedor == "AMBOS JUNTOS":
         fill=True, thresh=0, levels=100, cmap="mako")
     st.pyplot()
 
+st.write("[Ver Gráfico de progresos en el tiempo](https://share.streamlit.io/vichudo/eneldata/main/EnelDashboard1.py)")
