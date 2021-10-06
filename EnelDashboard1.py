@@ -48,4 +48,5 @@ if ejs == "TODOS":
 else:
     ejecutivos_chart(ejecutivos(getData(df_total,proveedor,habilidad,ejs)),False)
 
+st.text("<a href = 'https://share.streamlit.io/vichudo/eneldata/main/EnelDashboard1.py'>Progreso por Ejecutivo en el tiempo </a>")
 
