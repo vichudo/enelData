@@ -20,6 +20,7 @@ if proveedor == "UPCOM":
     sns.kdeplot(
         data=getData(df_total.reset_index(),"UPCOM",habilidad), x="SEMANA", y="SCORE",
         fill=True, thresh=0, levels=100, cmap="mako")
+    plt.title("UPCOM")
     st.pyplot()
 
 if proveedor == "KONECTA":
