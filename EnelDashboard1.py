@@ -49,4 +49,3 @@ else:
     ejecutivos_chart(ejecutivos(getData(df_total,proveedor,habilidad,ejs)),False)
 
 st.write("[Ver Gráfico de densidades en el tiempo](https://share.streamlit.io/vichudo/eneldata/main/EnelDashboard.py)")
-
