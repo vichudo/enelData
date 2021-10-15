@@ -19,7 +19,7 @@ if proveedor == "UPCOM":
     st.set_option('deprecation.showPyplotGlobalUse', False)
     sns.kdeplot(
         data=getData(df_total.reset_index(),"UPCOM",habilidad), x="SEMANA", y="SCORE",
-        fill=True, thresh=0, levels=100, cmap="mako")
+        fill=True, thresh=0, levels=100, cmap="mako").set_title(f"UPCOM - {habilidad}")
     st.pyplot()
 
 if proveedor == "KONECTA":
@@ -27,7 +27,7 @@ if proveedor == "KONECTA":
     #plt.figure(figsize=(21,10))
     fig2 = sns.kdeplot(
         data=getData(df_total.reset_index(),"KONECTA",habilidad), x="SEMANA", y="SCORE",
-        fill=True, thresh=0, levels=100, cmap="rocket")
+        fill=True, thresh=0, levels=100, cmap="rocket").set_title(f"KONECTA - {habilidad}")
     st.pyplot()
 
 if proveedor == "AMBOS SEPARADOS":
@@ -35,13 +35,13 @@ if proveedor == "AMBOS SEPARADOS":
     st.set_option('deprecation.showPyplotGlobalUse', False)
     sns.kdeplot(
         data=getData(df_total.reset_index(),"UPCOM",habilidad), x="SEMANA", y="SCORE",
-        fill=True, thresh=0, levels=100, cmap="mako")
+        fill=True, thresh=0, levels=100, cmap="mako").set_title(f"UPCOM - {habilidad}")
     st.pyplot()
 
     st.set_option('deprecation.showPyplotGlobalUse', False)
     sns.kdeplot(
         data=getData(df_total.reset_index(),"KONECTA",habilidad), x="SEMANA", y="SCORE",
-        fill=True, thresh=0, levels=100, cmap="rocket")
+        fill=True, thresh=0, levels=100, cmap="rocket").set_title(f"KONECTA - {habilidad}")
     st.pyplot()
 
 
@@ -50,6 +50,7 @@ if proveedor == "AMBOS JUNTOS":
     st.set_option('deprecation.showPyplotGlobalUse', False)
     sns.kdeplot(
         data=getData(df_total.reset_index(),"ALL",habilidad), x="SEMANA", y="SCORE",
-        fill=True, thresh=0, levels=100, cmap="mako")
+        fill=True, thresh=0, levels=100, cmap="mako").set_title(f"KONECTA Y UPCOM - {habilidad}")
     st.pyplot()
 
+st.write("[Ver Gráfico de progresos en el tiempo](https://share.streamlit.io/vichudo/eneldata/main/EnelDashboard1.py)")
